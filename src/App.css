@@ -133,6 +133,47 @@ form.create-note button {
   outline: none;
 }
 
+.submit-btn {
+  position: absolute;
+  right: 18px;
+  bottom: -18px;
+  background: #f5ba13;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+.cancel-btn {
+  position: absolute;
+  right: 68px; 
+  bottom: -18px;
+  background: rgba(0, 0, 0, 0.06);
+  color: #444;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.1s ease;
+}
+
+.cancel-btn:hover {
+  transform: scale(1.06);
+}
+
 .notes-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -195,6 +236,32 @@ form.create-note button {
   outline: none;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   opacity: 0.7;
+}
+
+.note .edit-btn {
+  position: absolute;
+  right: 60px; 
+  bottom: 15px;
+  background: rgba(66, 133, 244, 0.06);
+  border: 1px solid rgba(66, 133, 244, 0.08);
+  border-radius: 50%;
+  color: #4285f4;
+  font-size: 1rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  opacity: 0.85;
+}
+
+.note .edit-btn:hover {
+  background: rgba(66, 133, 244, 0.12);
+  border-color: rgba(66, 133, 244, 0.22);
+  transform: scale(1.08);
 }
 
 .note .delete-btn:hover {
