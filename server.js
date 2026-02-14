@@ -20,6 +20,19 @@ db.connect();
 app.use(cors());
 app.use(bodyParser.json());
 
+// Root route - API health check
+app.get("/", (req, res) => {
+  res.json({ 
+    status: "Keeper App API is running",
+    endpoints: {
+      getNotes: "GET /api/get-notes",
+      addNote: "POST /api/add/note",
+      updateNote: "PUT /api/notes/:id",
+      deleteNote: "DELETE /api/notes/:id"
+    }
+  });
+});
+
 // Get and display all notes from the DB
 app.get("/api/get-notes", async (req, res) => {
   try {
