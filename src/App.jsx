@@ -11,7 +11,9 @@ function App() {
   const [notes, setNotes] = useState([]);
   const [isExpanded, setIsExpanded] = useState(false);
   const timerRef = useRef(null);
-  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000";
+  const API_URL = (
+    import.meta.env.VITE_API_URL || "http://localhost:4000"
+  ).replace(/\/+$/, "");
 
   useEffect(() => {
     const fetchNotes = async () => {
